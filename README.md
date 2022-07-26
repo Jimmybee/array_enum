@@ -64,6 +64,10 @@ Attempting to find a record with a value that is not in the enum will fail:
 ```ruby
 User.with_favourite_colors("yellow") # => ArgumentError["yellow is not a valid value for favourite_colors"]
 ```
+### Using a text/string enum
+The helper methods, e.g. with_favourite_colors require the column be declared as text
+
+t.text :favourite_colors, array: true, null: false, default: []
 
 ### Subset Validator
 
